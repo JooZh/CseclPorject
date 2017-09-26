@@ -14,13 +14,13 @@ $(function () {
       getRandomNumber(0, 100)
     ];
     var bgColor = 'rgb(' + bgRgb[0] + ',' + bgRgb[1] + ',' + bgRgb[2] + ')'
+    $bgRgb.css('background', bgColor)
     // var navRgb = [
     //   getRandomNumber(150, 240),
     //   getRandomNumber(150, 240),
     //   getRandomNumber(150, 240)
     // ]
     // var navColor = 'rgb(' + navRgb[0] + ',' + navRgb[1] + ',' + navRgb[2] + ')'
-    $bgRgb.css('background', bgColor)
     // $navRgb.css('background', navColor)
   }
   function getRandomNumber(rMin, rMax) {
@@ -34,12 +34,12 @@ $(function () {
 $(function () {
   var $navList = $('.nav')
   var $content = $('.content')
-  $.each($navList.find('li'), function (index,value) {
-    $(value).click(function() {
+  $.each($navList.find('li'), function (index, value) {
+    $(value).click(function () {
       $navList.fadeOut()
       $content.slideDown()
-      $content.find('span').click(function() {
-        $content.slideUp('show',function(){
+      $content.find('span').click(function () {
+        $content.slideUp('show', function () {
           $navList.fadeIn()
         })
       })
