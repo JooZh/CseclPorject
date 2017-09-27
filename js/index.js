@@ -15,13 +15,6 @@ $(function () {
     ];
     var bgColor = 'rgb(' + bgRgb[0] + ',' + bgRgb[1] + ',' + bgRgb[2] + ')'
     $bgRgb.css('background', bgColor)
-    // var navRgb = [
-    //   getRandomNumber(150, 240),
-    //   getRandomNumber(150, 240),
-    //   getRandomNumber(150, 240)
-    // ]
-    // var navColor = 'rgb(' + navRgb[0] + ',' + navRgb[1] + ',' + navRgb[2] + ')'
-    // $navRgb.css('background', navColor)
   }
   function getRandomNumber(rMin, rMax) {
     var cha = rMax - rMin;
@@ -32,17 +25,43 @@ $(function () {
 
 // 点击打开窗体
 $(function () {
-  var $navList = $('.nav')
+  var $navList = $('.nav li')
   var $content = $('.content')
-  $.each($navList.find('li'), function (index, value) {
+  $.each($navList, function (index, value) {
     $(value).click(function () {
       $navList.fadeOut()
-      $content.slideDown()
-      $content.find('span').click(function () {
-        $content.slideUp('show', function () {
+      $content.eq(index).slideDown()
+      $content.find('.close').click(function () {
+        $content.eq(index).slideUp('show', function () {
           $navList.fadeIn()
         })
       })
     })
+  })
+})
+
+// 存入省份
+$(function () {
+  var $content = $('.content')
+  var $select = $('.select-province-hook')
+  var $showCitys = $('.show-province-hook')
+  var htmlCitys = ''
+  $.each(china_cities, function (index, value) {
+    htmlCitys += '<li>' + value.name + '</li>'
+  })
+  $showCitys.append(htmlCitys)
+  $select.click(function (e) {
+    e.stopPropagation()
+    $showCitys.slideDown()
+  })
+  $.each($showCitys.find('li'), function (index, value) {
+    $(value).click(function (e) {
+      e.stopPropagation()
+      $select.find('.show-select-hook').html($(this).html())
+      $showCitys.slideUp()
+    })
+  })
+  $content.click(function() {
+    $showCitys.slideUp()
   })
 })

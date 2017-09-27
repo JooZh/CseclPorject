@@ -6,7 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="./css/reset.css">
-  <link rel="stylesheet" href="./css/css.css">
+  <link rel="stylesheet" href="./css/icon.css">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/index.css">
   <title>Document</title>
 </head>
 
@@ -30,14 +32,211 @@
         <li>资 源 库</li>
         <li>招新报名</li>
       </ul>
-
     </div>
     <ul class="member">
       <li class="avatar">名字1</li>
     </ul>
-    <div class="content">
-      <span>close</span>
-    </div>
+    <section class="content">
+      <div class="hd">
+        <span class="close">close</span>
+      </div>
+      <div class="bd">1</div>
+    </section>
+    <section class="content">
+      <div class="hd">
+        <span class="close">close</span>
+      </div>
+      <div class="bd">2</div>
+    </section>
+    <section class="content">
+      <div class="hd">
+        <span class="close">close</span>
+      </div>
+      <div class="bd">3</div>
+    </section>
+    <section class="content">
+      <div class="hd">
+        <span class="close">close</span>
+      </div>
+      <div class="bd">4</div>
+    </section>
+    <!-- 报名表的申请 -->
+    <section class="content reg">
+      <div class="hd">
+        <span>CSECL-11 报名申请</span>
+        <span class="close">close</span>
+      </div>
+      <div class="bd-wrapper">
+        <div class="bd">
+          <form>
+            <div class="line-text">选择比努力重要,少走弯路才是最快的捷径</div>
+            <div class="line">
+              <div class="task task-all">
+                <p class="title red">姓名 *</p>
+                <div class="text">
+                  <span class="icon icon-user"></span>
+                  <input type="text" placeholder="请填写姓名">
+                </div>
+              </div>
+            </div>
+            <div class="line">
+              <div class="task task-half">
+                <p class="title red">性别 *</p>
+                <div class="radio">
+                  <label for="sex1"><input type="radio" name="sex" id="sex1" value="男" checked> 男</label>
+                  <label for="sex2"><input type="radio" name="sex" id="sex2" value="女"> 女</label>
+                </div>
+              </div>
+              <div class="task">
+                <p class="title red">籍贯 *</p>
+                <div class="place">
+                  <div class="place-t select-province-hook">
+                    <p class="place-t-w show-select-hook">请选择</p>
+                    <span class="icon icon-down"></span>
+                    <ul class="show-province show-province-hook"></ul>
+                  </div>
+                  <div class="place-t">
+                    <p class="place-t-w select-hook">请选择</p>
+                    <span class="icon icon-down"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="line all-line">
+              <div class="task">
+                <p class="title red">手机 *</p>
+                <div class="text">
+                  <span class="icon icon-phone"></span>
+                  <input type="text" placeholder="填写手机号码">
+                </div>
+              </div>
+              <div class="task">
+                <p class="title red">QQ *</p>
+                <div class="text">
+                  <span class="icon icon-qq"></span>
+                  <input type="text" placeholder="填写QQ号码">
+                </div>
+              </div>
+            </div>
+            <div class="line">
+              <div class="task task-all">
+                <p class="title red">学号 *</p>
+                <div class="text">
+                  <input type="text" placeholder="请填写学号">
+                </div>
+              </div>
+            </div>
+            <div class="line-text">活鱼逆流而上,死魚随波逐流</div>
+            <div class="line">
+              <div class="task task-all">
+                <p class="title red">学院 *</p>
+                <div class="select">
+                  <p class="select-text">请选择</p>
+                  <span class="icon icon-down"></span>
+                </div>
+              </div>
+            </div>
+            <div class="line">
+              <div class="task task-all">
+                <p class="title red">专业 *</p>
+                <div class="select">
+                  <p class="select-text">请选择</p>
+                  <span class="icon icon-down"></span>
+                </div>
+              </div>
+            </div>
+            <div class="line">
+              <div class="task task-all">
+                <p class="title red">高考数学成绩 *</p>
+                <p class="text">
+                  <input type="text" placeholder="实事求是">
+                </p>
+              </div>
+              <div class="task task-all">
+                <p class="title red">高考英语成绩 *</p>
+                <p class="text">
+                  <input type="text" placeholder="实事求是">
+                </p>
+              </div>
+            </div>
+            <div class="line">
+              <div class="task task-all">
+                <p class="title red">有无推荐人 *</p>
+                <p class="text">
+                  <input type="text" placeholder="请填写专业名称">
+                </p>
+              </div>
+            </div>
+            <div class="line-text">真的很累吗？累就对了,告诉自己：容易走的都是下坡路。</div>
+            <div class="line">
+              <div class="task task-half">
+                <p class="title red">报名方向 *</p>
+                <p class="radio fx">
+                  <label for="fx1"><input type="radio" name="fx" id="fx1" value="产品"> 产品</label>
+                  <label for="fx2"><input type="radio" name="fx" id="fx2" value="前端"> 前端</label>
+                  <label for="fx3"><input type="radio" name="fx" id="fx2" value="程序" checked> 程序</label>
+                </p>
+                <div class="fx-info">
+                  <p>程序方向：后端开发、数据库设计、服务器部署等（Linux/Windows系统,Apache服务器,PHP语言,MySQL,MVC模式......）
+                  </p>
+                  <!-- <p>前端方向：web前端开发、UI设计（web2.0网页设计,HTML,CSS,JavaScript,jQuery,Ajax......）
+                </p>
+                <p>产品方向：项目产品管理及运营（网站、APP和公众号运营,策划文案,产品策划与测试......）</p> -->
+                </div>
+              </div>
+            </div>
+            <div class="line">
+              <div class="task task-all">
+                <p class="title red">用自己的话描述CSECL实验室是干什么的（尤其是自己报的方向）？以及自己打算如何在实验室学习？ *</p>
+                <p class="area">
+                  <textarea placeholder="填写内容"></textarea>
+                </p>
+              </div>
+            </div>
+            <div class="line">
+              <div class="task task-all">
+                <p class="title red">简单谈谈你一年内的规划？能否在实验室呆满12个月？*</p>
+                <p class="area">
+                  <textarea placeholder="填写内容"></textarea>
+                </p>
+              </div>
+            </div>
+            <div class="line">
+              <div class="task task-all">
+                <p class="title red">你做人的准则是什么？坚持多久了？*</p>
+                <p class="area">
+                  <textarea placeholder="填写内容"></textarea>
+                </p>
+              </div>
+            </div>
+            <div class="line">
+              <div class="task task-all">
+                <p class="title red">介绍一下自己和取得过的成就 ？*</p>
+                <p class="area">
+                  <textarea placeholder="填写内容"></textarea>
+                </p>
+              </div>
+            </div>
+            <div class="line">
+              <div class="task task-all">
+                <p class="title red">对于现状你满意吗？哪些方面你需要加强？*</p>
+                <p class="area">
+                  <textarea placeholder="填写内容"></textarea>
+                </p>
+              </div>
+            </div>
+            <div class="line">
+              <div class="task task-all">
+                <p class="title red">你觉得我们为什么会录取你？*</p>
+                <p class="area">
+                  <textarea placeholder="填写内容"></textarea>
+                </p>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
   </div>
 </body>
 <script src="./jQplugins/jquery.min.js"></script>
@@ -45,6 +244,7 @@
 <script src="./jQplugins/particles.param.js"></script>
 <script src="./js/quote-machine.js"></script>
 <script src="./js/avatar-play.js"></script>
+<script src="./js/china_cities.js"></script>
 <script src="./js/index.js"></script>
 
 </html>
