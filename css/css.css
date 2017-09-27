@@ -5,6 +5,10 @@ html{
 body{
     width: 100%;
     height: 100%;
+    line-height: 1;
+    font-family: 'PingFang SC', 'STHeitiSC-Light', 'Helvetica-Light', arial, sans-serif, 'Droid Sans Fallback';
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
 }
 .page-wrapper{
     width: 100%;
@@ -49,8 +53,21 @@ body{
     width: 500px;
     height: 150px;
     margin: 0 0 0 -250px;
-    background: #000;
 }
+.container .logo-wrapper .logo-img{
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+    font-size:35px; 
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+.container .logo-wrapper .logo-info{
+    color: #fff;
+    line-height: 25px;
+    font-size: 14px;
+    text-align: center;
+}       
 .container .nav{
     display: flex;
 }
@@ -65,7 +82,9 @@ body{
     color: #333;
     border-radius: 4px;
     background: #ffffff;
+    opacity: 0.7;
     transition: all 10s ease-in;
+    cursor: pointer
 }
 .content{
     width: 1000px;
@@ -77,13 +96,10 @@ body{
     display: none;
 }
 .member{
-    width: 40px;
-    height: 40px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    margin: -20px 0 0 -20px;
-    z-index: 5;
+    width: 0px;
+    height: 0px;
+    position: relative;
+    z-index: 2;
     background: red
 }
 .member li{
@@ -91,5 +107,44 @@ body{
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background: yellow
+    background: yellow;
+    transition: all 5s ease-in;
+}
+
+
+/* 名言 */
+.main{
+	width:500px;
+    background:#fff;
+    opacity: 0.7;
+	border-radius:5px;
+}
+.main .tp{
+	padding:20px 25px;
+	text-align:left;
+	font-size:14px;
+	font-weight:500px;
+	font-family:arial;
+}
+.main .cp{
+	text-align:right;
+	padding-right:20px;
+	margin-bottom:15px;
+}
+.main .fp{
+	width:100%;
+	height:35px;
+	padding-bottom:10px;
+}
+.main .fp .new{
+	float:right;
+	margin-right:20px;
+	height:30px;
+	background:#ccc;
+	line-height:30px;
+	padding:0 10px;
+	border-radius:5px;
+	cursor:pointer;
+	color:#fff;
+  font-size:12px;
 }
