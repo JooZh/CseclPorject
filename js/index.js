@@ -152,7 +152,10 @@ $(function() {
 
 // 鼠标焦点颜色
 $(function() {
-  var $input = $('input,textarea')
+  var $input = $('input[type!=radio],textarea')
   var color = '#5597F5'
-  console.log()
+  $input.click(function(){
+    console.log(1)
+  })
+  console.log($input)
 })
