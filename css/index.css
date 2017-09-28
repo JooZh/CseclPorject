@@ -104,7 +104,7 @@
 .reg .bd-wrapper{
     width: 960px;
     height: 650px;
-    overflow: scroll;
+    overflow-y: scroll;
 }
 .reg .bd-wrapper .bd{
     width: 600px;
@@ -149,6 +149,7 @@
     padding: 5px;
     background: #fcfcfc;
     display: flex;
+    position: relative;
 }
 .reg .bd-wrapper .bd .line .task .select .select-text{
     flex: 1;
@@ -173,7 +174,7 @@
     text-align: center;
 }
 .reg .bd-wrapper .bd .line .task .fx-info{
-    min-height: 80px;
+    min-height: 50px;
     line-height: 25px;
     border: 1px solid #e5e5e5;
     background: #f6f6f6;
@@ -181,6 +182,10 @@
     font-size: 14px;
     border-radius: 4px;
     box-sizing: border-box;
+}
+.reg .bd-wrapper .bd .line .task .fx-info p{
+    display: none;
+    color: #666
 }
 .reg .bd-wrapper .bd .line .task .text input{
     border: none;
@@ -200,9 +205,14 @@
     border: 1px solid #ccc;
     height: 25px;
     padding: 5px;
-    margin: 0 5px;
     background: #fcfcfc;
     position: relative;
+}
+.reg .bd-wrapper .bd .line .task .place-tl{
+    margin: 0 40px 0 0;
+}
+.reg .bd-wrapper .bd .line .task .place-tr{
+    margin: 0 0px 0 0;
 }
 .reg .bd-wrapper .bd .line .task .place-t .place-t-w{
     flex: 1;
@@ -210,6 +220,7 @@
     color: #666;
     text-indent: 5px;
     font-size: 14px;
+    overflow: hidden;
 }
 .reg .bd-wrapper .bd .line .task .area textarea{
     min-height: 100px;
@@ -222,29 +233,43 @@
 .reg .bd-wrapper .bd .line .task-half .title{
     margin-bottom: 20px;
 }
+.reg .bd-wrapper .bd .line .aborder:hover{
+    border-color: #5597F5
+}
 
-.reg .show-city{
+
+
+.reg .hide-show{
     display: none;
     position: absolute;
     left: -1px;
     top: 100%;
     height: 200px;
-    width: 100%;
-    border: 1px solid #ccc;
-    overflow: scroll;
+    min-width: 100%;
+    border: 1px solid #5597F5;
+    overflow-y: scroll;
+    overflow-x: scroll;
     background:#fff;
 }
-.reg .show-province li{
+.reg .hide-show li{
     font-size: 14px;
     text-indent: 10px;
     color: #666;
     line-height: 25px;
     height: 25px;
+    overflow: hidden;
 }
-.reg .show-province li:hover{
-    background: #e5e5e5;
+.reg .hide-show li:hover{
+    background: #5597F5;
+    color: #fff;
     cursor: pointer;
 }
+
+.reg .hide-show-year{
+    height: 70px;
+    z-index: 10;
+}
+
 
 
 
