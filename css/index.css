@@ -108,6 +108,7 @@
 }
 .reg .bd-wrapper .bd{
     width: 600px;
+    height: 2600px;
     margin: 0 auto;
     padding: 20px 0;
 }
@@ -130,10 +131,21 @@
 .reg .bd-wrapper .bd .line .task:hover{
     background: #f0f0f0
 }
+
 .reg .bd-wrapper .bd .line .task .title{
     line-height: 20px;
     margin-bottom: 10px;
     font-size: 16px;
+}
+.reg .bd-wrapper .bd .line .task .title span.cue{
+    font-size: 12px;
+    color: #5597F5;
+    float: right;
+    opacity: 0;
+    transition: all 0.3s ease-in;
+}
+.reg .bd-wrapper .bd .line .task:hover .title span.cue{
+    opacity: 1;
 }
 .reg .bd-wrapper .bd .line .task .text{
     border: 1px solid #ccc;
@@ -222,6 +234,9 @@
     font-size: 14px;
     overflow: hidden;
 }
+.reg .bd-wrapper .bd .line .task .area {
+    position: relative;
+}
 .reg .bd-wrapper .bd .line .task .area textarea{
     min-height: 100px;
     width: 100%;
@@ -229,6 +244,26 @@
     padding: 5px;
     border: 1px solid #ccc;
     box-sizing: border-box
+}
+
+.reg .bd-wrapper .bd .line .task .area .text-number{
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+    font-size: 12px;
+    color: #999999
+}
+.reg .bd-wrapper .bd .line .task .submit{
+    text-align: center;
+    line-height: 40px;
+    height: 40px;
+    font-size: 16px;
+    background: #5597F5;
+    color: #fff;
+    transition: all 0.1s ease-in
+}
+.reg .bd-wrapper .bd .line .task .submit:hover{
+    background: #4A86DB
 }
 .reg .bd-wrapper .bd .line .task-half .title{
     margin-bottom: 20px;
@@ -248,7 +283,6 @@
     min-width: 100%;
     border: 1px solid #5597F5;
     overflow-y: scroll;
-    overflow-x: scroll;
     background:#fff;
 }
 .reg .hide-show li{

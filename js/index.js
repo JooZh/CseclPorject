@@ -40,8 +40,7 @@ $(function () {
   })
 })
 
-
-// 存入省份
+// 省份 县市选择
 $(function () {
   var citMap = china_cities
   var $content = $('.content')
@@ -56,12 +55,14 @@ $(function () {
   })
   $provinceSelect.click(function (e) {
     e.stopPropagation()
-    $showProvince.slideDown()
+    $showProvince.slideToggle()
   })
   $citySelect.click(function (e) {
     e.stopPropagation()
     if ($showCity.find('li').length) {
-      $showCity.slideDown()
+      $showCity.slideToggle()
+    }else{
+      $citySelect.find('.show-select-hook').html('先选择省份')
     }
   })
   $.each($showProvince.find('li'), function (index, value) {
@@ -103,7 +104,7 @@ $(function () {
   })
   $yearSelect.click(function (e) {
     e.stopPropagation()
-    $showYear.slideDown()
+    $showYear.slideToggle()
   })
   $.each($showYear.find('li'), function (key, item) {
     $(item).click(function (e) {
@@ -118,13 +119,13 @@ $(function () {
 })
 
 // 选择学院
-$(function() {
+$(function () {
   var $content = $('.content')
   var $collegeSelect = $('.select-college-hook')
   var $showCollege = $('.show-college-hook')
   $collegeSelect.click(function (e) {
     e.stopPropagation()
-    $showCollege.slideDown()
+    $showCollege.slideToggle()
   })
   $.each($showCollege.find('li'), function (key, item) {
     $(item).click(function (e) {
@@ -139,11 +140,11 @@ $(function() {
 })
 
 //显示方向
-$(function() {
+$(function () {
   var $selectRod = $('.fx-hook label')
   var $showConeb = $('.fx-info .info-word')
-  $.each($selectRod,function(index,value) {
-    $(value).click(function() {
+  $.each($selectRod, function (index, value) {
+    $(value).click(function () {
       $showConeb.hide()
       $showConeb.eq(index).show()
     })
@@ -151,11 +152,60 @@ $(function() {
 })
 
 // 鼠标焦点颜色
-$(function() {
+$(function () {
   var $input = $('input[type!=radio],textarea')
-  var color = '#5597F5'
-  $input.click(function(){
-    console.log(1)
+  var focusColor = '#5597F5'
+  var defaultColor = '#cccccc'
+  $input.click(function (e) {
+    if (e.target.tagName === 'TEXTAREA') {
+      $input.css('border-color', defaultColor)
+      $(this).css('border-color', focusColor)
+    } else {
+      $input.parent('.aborder').css('border-color', defaultColor)
+      $(this).parent('.aborder').css('border-color', focusColor)
+    }
   })
-  console.log($input)
 })
+
+// 输入字数判断
+$(function() {
+  var $textarea = $('textarea')
+  var $textNumber = $('.text-number')
+  $.each($textarea,function(index,value){
+    $(value).on('input',function() {
+      var len = $.trim($(this).val()).length
+      if(len<20) {
+        $textNumber.eq(index).text('还差'+(20-len)+'字')
+      }else{
+        $textNumber.eq(index).text(len+'/200字')
+      }
+    })
+  })
+})
+
+// 填表效果
+
+// $(function(){
+//   var $line = $('.line,.submit,.line-text')
+//   var $add = $('#consSaa')
+//   var num = 2
+//   var scroll = 100
+//   console.log($line)
+//   $line.hide()
+//   $line.eq(0).show()
+//   $line.eq(1).show()
+//   $add.hide()
+//   $line.eq(1).click(function(){
+//     $add.show()
+//   })
+//   $add.click(function(){
+//     $add.hide()
+//     $line.eq(num).slideDown()
+//     $line.eq(num).click(function(){
+//       $add.show()
+//     })
+//     $('.bd-wrapper').animate({scrollTop: scroll}, 1000)
+//     num++
+//     scroll+=100
+//   })
+// })
