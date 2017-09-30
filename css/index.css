@@ -84,14 +84,31 @@
     z-index: 10;
     display: none;
 }
-
-
-
+.content .hd{
+    width: 960px;
+    height: 50px;
+    border-bottom: 1px solid #d3d3d3;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    background: #f0f0f0;
+    text-align: center;
+}
+.content .hd h2{
+    height: 30px;
+    line-height: 30px;
+    font-size: 18px;
+    padding: 10px 0;
+}
+.content .hd h2 span.icon{
+    float: right;
+    line-height: 30px;
+    margin-right: 10px;
+}
 
 .reg {
     background: #f6f6f6;
 }
-.reg .hd{
+/* .reg .hd{
     width: 960px;
     height: 50px;
     line-height: 50px;
@@ -100,7 +117,7 @@
     border-top-right-radius: 4px;
     background: #f0f0f0;
     text-align: center;
-}
+} */
 .reg .bd-wrapper{
     width: 960px;
     height: 650px;
@@ -153,6 +170,12 @@
     padding: 5px;
     background: #fcfcfc;
     display: flex;
+}
+.reg .bd-wrapper .bd .line .task i.icon-ok{
+    color:#5597F5;
+}
+.reg .bd-wrapper .bd .line .task i.icon-close{
+    color:#d9534f;
 }
 .reg .bd-wrapper .bd .line .task .select{
     border: 1px solid #ccc;
@@ -251,7 +274,15 @@
     right: 8px;
     bottom: 8px;
     font-size: 12px;
+    height: 20px;
+    line-height: 20px;
     color: #999999
+}
+.reg .bd-wrapper .bd .line .task .area .text-number i{
+    font-size: 14px;
+    line-height: 20px;
+    position: relative;
+    top: 2px
 }
 .reg .bd-wrapper .bd .line .task .submit{
     text-align: center;
@@ -260,7 +291,8 @@
     font-size: 16px;
     background: #5597F5;
     color: #fff;
-    transition: all 0.1s ease-in
+    transition: all 0.1s ease-in;
+    cursor: pointer;
 }
 .reg .bd-wrapper .bd .line .task .submit:hover{
     background: #4A86DB

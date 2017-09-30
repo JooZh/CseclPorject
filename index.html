@@ -38,33 +38,32 @@
     </ul>
     <section class="content">
       <div class="hd">
-        <span class="close">close</span>
+        <span class="icon icon-close close-hook"></span>
       </div>
       <div class="bd">1</div>
     </section>
     <section class="content">
       <div class="hd">
-        <span class="close">close</span>
+        <span class="icon icon-close close-hook"></span>
       </div>
       <div class="bd">2</div>
     </section>
     <section class="content">
       <div class="hd">
-        <span class="close">close</span>
+        <span class="icon icon-close close-hook"></span>
       </div>
       <div class="bd">3</div>
     </section>
     <section class="content">
       <div class="hd">
-        <span class="close">close</span>
+        <span class="icon icon-close close-hook"></span>
       </div>
       <div class="bd">4</div>
     </section>
     <!-- 报名表的申请 -->
     <section class="content reg">
       <div class="hd">
-        <span>CSECL-11 报名申请</span>
-        <span class="close">close</span>
+        <h2>CSECL-11 报名申请 <span class="icon icon-close close-hook"></span></h2>
       </div>
       <div class="bd-wrapper">
         <div class="bd">
@@ -72,9 +71,10 @@
           <div class="line">
             <div class="task task-all">
               <p class="title">姓名 * <span class="cue">[填写姓名2-4个中文汉字]</span></p>
-              <div class="text aborder">
+              <div class="text aborder check-hook">
                 <span class="icon icon-user"></span>
-                <input type="text" placeholder="请填写姓名">
+                <input id="username" type="text" placeholder="请填写姓名">
+                <i class="icon"></i>
               </div>
             </div>
           </div>
@@ -82,14 +82,15 @@
             <div class="task task-half">
               <p class="title">性别 * <span class="cue">[没有人妖这个选项]</span></p>
               <div class="radio">
-                <label for="sex1"><input type="radio" name="sex" id="sex1" value="男" checked> 男</label>
-                <label for="sex2"><input type="radio" name="sex" id="sex2" value="女"> 女</label>
+                <label for="sex1"><input type="radio" name="sex" id="sex1" value="1" checked> 男</label>
+                <label for="sex2"><input type="radio" name="sex" id="sex2" value="0"> 女</label>
               </div>
             </div>
             <div class="task task-all">
               <p class="title">学号 * <span class="cue">[你的校园卡上的学号]</span></p>
-              <div class="text aborder">
-                <input type="text" placeholder="请填写学号">
+              <div class="text aborder check-hook">
+                <input id="student" type="text" placeholder="请填写学号">
+                <i class="icon"></i>
               </div>
             </div>
           </div>
@@ -98,12 +99,14 @@
               <p class="title">籍贯 * <span class="cue">[我们暂时只招收中国籍农大学生]</span></p>
               <div class="place">
                 <div class="place-t aborder place-tl select-province-hook">
-                  <p class="place-t-w show-select-hook">请选择</p>
+                  <p id="placeProvince" class="place-t-w show-select-hook">请选择</p>
+                  <i class="icon"></i>
                   <span class="icon icon-down"></span>
                   <ul class="hide-show show-province-hook"></ul>
                 </div>
                 <div class="place-t aborder place-tr select-city-hook">
-                  <p class="place-t-w show-select-hook">请选择</p>
+                  <p id="placeCity" class="place-t-w show-select-hook">请选择</p>
+                  <i class="icon"></i>
                   <span class="icon icon-down"></span>
                   <ul class="hide-show show-city-hook"></ul>
                 </div>
@@ -113,24 +116,27 @@
           <div class="line">
             <div class="task">
               <p class="title">手机 * <span class="cue">[用于接收面试短信]</span></p>
-              <div class="text aborder">
+              <div class="text aborder check-hook">
                 <span class="icon icon-phone"></span>
-                <input type="text" placeholder="填写手机号码">
+                <input id="phone" type="text" placeholder="填写手机号码">
+                <i class="icon"></i>
               </div>
             </div>
             <div class="task">
               <p class="title">QQ * <span class="cue">[主要的社交沟通工具]</span></p>
-              <div class="text aborder">
+              <div class="text aborder check-hook">
                 <span class="icon icon-qq"></span>
-                <input type="text" placeholder="填写QQ号码">
+                <input id="qq" type="text" placeholder="填写QQ号码">
+                <i class="icon"></i>
               </div>
             </div>
           </div>
           <div class="line">
             <div class="task task-all">
               <p class="title">邮箱 * <span class="cue">[务必是常用邮箱]</span></p>
-              <div class="text aborder">
-                <input type="email" placeholder="填写电子邮件地址">
+              <div class="text aborder check-hook">
+                <input id="emial" type="email" placeholder="填写电子邮件地址">
+                <i class="icon"></i>
               </div>
             </div>
           </div>
@@ -139,7 +145,8 @@
             <div class="task task-all">
               <p class="title">年级 * <span class="cue">[我们只招收小鲜肉]</span></p>
               <div class="select aborder select-year-hook">
-                <p class="select-text show-select-hook">请选择</p>
+                <p id="grade" class="select-text show-select-hook">请选择</p>
+                <i class="icon"></i>
                 <span class="icon icon-down"></span>
                 <ul class="hide-show hide-show-year show-year-hook"></ul>
               </div>
@@ -149,7 +156,8 @@
             <div class="task task-all">
               <p class="title">学院 * <span class="cue">[没有学院歧视]</span></p>
               <div class="select aborder select-college-hook">
-                <p class="select-text show-select-hook">请选择</p>
+                <p id="college" class="select-text show-select-hook">请选择</p>
+                <i class="icon"></i>
                 <span class="icon icon-down"></span>
                 <ul class="hide-show show-college-hook">
                   <li>信息科学技术学院</li>
@@ -179,38 +187,34 @@
             </div>
             <div class="task task-all">
               <p class="title">专业 * <span class="cue">[没有专业限制]</span></p>
-              <p class="text aborder">
-                <input type="text" placeholder="填写专业">
+              <p class="text aborder check-hook">
+                <input id="major" type="text" placeholder="填写专业">
+                <i class="icon"></i>
               </p>
             </div>
           </div>
           <div class="line">
             <div class="task task-all">
               <p class="title">高考数学成绩 * <span class="cue">[这都不算什么]</span></p>
-              <p class="text aborder">
-                <input type="text" placeholder="实事求是">
+              <p class="text aborder check-hook">
+                <input id="math" type="text" placeholder="实事求是">
+                <i class="icon"></i>
               </p>
             </div>
             <div class="task task-all">
               <p class="title">高考英语成绩 * <span class="cue">[大学可以改变一切]</span></p>
-              <p class="text aborder">
-                <input type="text" placeholder="实事求是">
+              <p class="text aborder check-hook">
+                <input id="english" type="text" placeholder="实事求是">
+                <i class="icon"></i>
               </p>
             </div>
           </div>
           <div class="line">
             <div class="task task-all">
               <p class="title">有无推荐人 * <span class="cue">[说明你挺优秀，我们欢迎]</span></p>
-              <p class="text aborder">
-                <input type="text" placeholder="没有则填写 无 ; 有则填写相关信息 如：姓名-内容">
-              </p>
-            </div>
-          </div>
-          <div class="line">
-            <div class="task task-all">
-              <p class="title">有无保荐人 * <span class="cue">[说明你挺牛逼，我们非常欢迎]</span></p>
-              <p class="text aborder">
-                <input type="text" placeholder="没有则填写 无 ; 有则填写相关信息 如：姓名-内容">
+              <p class="text aborder check-hook">
+                <input id="referrer" type="text" placeholder="有填写姓名，没有填写无">
+                <i class="icon"></i>
               </p>
             </div>
           </div>
@@ -234,8 +238,11 @@
             <div class="task task-all">
               <p class="title">用自己的话描述CSECL实验室是干什么的（尤其是自己报的方向）？以及自己打算如何在实验室学习？ * <span class="cue">[了解我们，也了解你自己]</span></p>
               <div class="area">
-                <textarea class="aborder" maxlength="200" placeholder="填写内容"></textarea>
-                <div class="text-number"><span>0</span>/200</div>
+                <textarea id="question1" class="aborder" maxlength="200" placeholder="填写内容"></textarea>
+                <div class="text-number">
+                  <span>0/200</span>
+                  <i class="icon"></i>
+                </div>
               </div>
             </div>
           </div>
@@ -243,8 +250,11 @@
             <div class="task task-all">
               <p class="title">简单谈谈你一年内的规划？能否在实验室呆满12个月？* <span class="cue">[规划！奋斗！成功！]</span></p>
               <div class="area">
-                <textarea class="aborder" maxlength="200" placeholder="填写内容"></textarea>
-                <div class="text-number"><span>0</span>/200</div>
+                <textarea id="question2" class="aborder" maxlength="200" placeholder="填写内容"></textarea>
+                <div class="text-number">
+                  <span>0/200</span>
+                  <i class="icon"></i>
+                </div>
               </div>
             </div>
           </div>
@@ -252,8 +262,11 @@
             <div class="task task-all">
               <p class="title">你做人的准则是什么？坚持多久了？* <span class="cue">[人总是要有原则的]</span></p>
               <div class="area">
-                <textarea class="aborder" maxlength="200" placeholder="填写内容"></textarea>
-                <div class="text-number"><span>0</span>/200</div>
+                <textarea id="question3" class="aborder" maxlength="200" placeholder="填写内容"></textarea>
+                <div class="text-number">
+                  <span>0/200</span>
+                  <i class="icon"></i>
+                </div>
               </div>
             </div>
           </div>
@@ -261,8 +274,11 @@
             <div class="task task-all">
               <p class="title">介绍一下自己和取得过的成就 ？* <span class="cue">[人总有辉煌的时候]</span></p>
               <div class="area">
-                <textarea class="aborder" maxlength="200" placeholder="填写内容"></textarea>
-                <div class="text-number"><span>0</span>/200</div>
+                <textarea id="question4" class="aborder" maxlength="200" placeholder="填写内容"></textarea>
+                <div class="text-number">
+                    <span>0/200</span>
+                    <i class="icon"></i>
+                  </div>
               </div>
             </div>
           </div>
@@ -270,8 +286,11 @@
             <div class="task task-all">
               <p class="title">对于现状你满意吗？哪些方面你需要加强？* <span class="cue">[好好想想]</span></p>
               <div class="area">
-                <textarea class="aborder" maxlength="200" placeholder="填写内容"></textarea>
-                <div class="text-number"><span>0</span>/200</div>
+                <textarea id="question5" class="aborder" maxlength="200" placeholder="填写内容"></textarea>
+                <div class="text-number">
+                  <span>0/200</span>
+                  <i class="icon"></i>
+                </div>
               </div>
             </div>
           </div>
@@ -279,8 +298,11 @@
             <div class="task task-all">
               <p class="title">你觉得我们为什么会录取你？* <span class="cue">[你觉得呢？]</span></p>
               <div class="area">
-                <textarea class="aborder" maxlength="200" placeholder="填写内容"></textarea>
-                <div class="text-number"><span>0</span>/200</div>
+                <textarea id="question6" class="aborder" maxlength="200" placeholder="填写内容"></textarea>
+                <div class="text-number">
+                  <span>0/200</span>
+                  <i class="icon"></i>
+                </div>
               </div>
             </div>
           </div>

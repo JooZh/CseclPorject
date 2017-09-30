@@ -31,7 +31,7 @@ $(function () {
     $(value).click(function () {
       $navList.fadeOut()
       $content.eq(index).slideDown()
-      $content.find('.close').click(function () {
+      $content.find('.close-hook').click(function () {
         $content.eq(index).slideUp('show', function () {
           $navList.fadeIn()
         })
@@ -61,7 +61,7 @@ $(function () {
     e.stopPropagation()
     if ($showCity.find('li').length) {
       $showCity.slideToggle()
-    }else{
+    } else {
       $citySelect.find('.show-select-hook').html('先选择省份')
     }
   })
@@ -69,9 +69,11 @@ $(function () {
     $(value).click(function (e) {
       e.stopPropagation()
       $provinceSelect.find('.show-select-hook').html($(this).html())
+      $provinceSelect.find('.show-select-hook').next().removeClass('icon-close').addClass('icon-ok')
       $showProvince.slideUp()
       $showCity.html('')
       $citySelect.find('.show-select-hook').html('请选择')
+      $citySelect.find('.show-select-hook').next().removeClass('icon-ok')
       $.each(citMap[index + 1].sub, function (i, v) {
         if (i > 0) {
           $showCity.append('<li title="' + v.name + '">' + v.name + '</li>')
@@ -81,6 +83,7 @@ $(function () {
         $(item).click(function (e) {
           e.stopPropagation()
           $citySelect.find('.show-select-hook').html($(this).html()).attr('title', $(this).html())
+          $citySelect.find('.show-select-hook').next().removeClass('icon-close').addClass('icon-ok')
           $showCity.slideUp()
         })
       })
@@ -110,6 +113,7 @@ $(function () {
     $(item).click(function (e) {
       e.stopPropagation()
       $yearSelect.find('.show-select-hook').html($(this).html())
+      $yearSelect.find('.show-select-hook').next().removeClass('icon-close').addClass('icon-ok')
       $showYear.slideUp()
     })
   })
@@ -131,6 +135,7 @@ $(function () {
     $(item).click(function (e) {
       e.stopPropagation()
       $collegeSelect.find('.show-select-hook').html($(this).html())
+      $collegeSelect.find('.show-select-hook').next().removeClass('icon-close').addClass('icon-ok')
       $showCollege.slideUp()
     })
   })
@@ -167,20 +172,59 @@ $(function () {
   })
 })
 
-// 输入字数判断
-$(function() {
-  var $textarea = $('textarea')
-  var $textNumber = $('.text-number')
-  $.each($textarea,function(index,value){
-    $(value).on('input',function() {
-      var len = $.trim($(this).val()).length
-      if(len<20) {
-        $textNumber.eq(index).text('还差'+(20-len)+'字')
-      }else{
-        $textNumber.eq(index).text(len+'/200字')
+
+
+
+
+// 实时检查------------------------
+$(function () {
+  // 姓名
+  checkedInput('#username', /^[\u4E00-\u9FA5]{2,4}$/)
+  // 学号
+  checkedInput('#student', /^20[1-9]\d{9}$/)
+  // 学号
+  checkedInput('#phone', /^1[3|4|5|8][0-9]\d{8}$/)
+  // 验证QQ
+  checkedInput('#qq', /^\d{5,11}$/)
+  // 验证电子邮箱
+  checkedInput('#emial', /^(\w)+(\.\w+)*@(\w)+((\.\w{2,3}){1,3})$/)
+  // 验证专业
+  checkedInput('#major', /^[\u4E00-\u9FA5]{2,8}$/)
+  // 验证数学
+  checkedInput('#math', /^([1-9])$|^([1-9]\d)$|^(1[0-4]\d)$|^(150)$/)
+  // 验证英语
+  checkedInput('#english', /^([1-9])$|^([1-9]\d)$|^(1[0-4]\d)$|^(150)$/)
+  // 验证推荐人
+  checkedInput('#referrer', /^[\u4E00-\u9FA5]+$/)
+  // 文本域验证
+  $.each($('textarea'), function (index, value) {
+    $(value).on('input', function () {
+      // 去掉空格
+      var len = $.trim($(this).val().replace(/\s/g, "")).length
+      if (len < 20) {
+        $(this).next().css('color', '#d9534f')
+        $(this).next().find('span').text('还差' + (20 - len) + '字')
+        $(this).next().find('.icon').removeClass('icon-ok')
+        $(this).next().find('.icon').addClass('icon-close')
+      } else {
+        $(this).next().css('color', '#5597F5')
+        $(this).next().find('span').text(len + '/200字')
+        $(this).next().find('.icon').removeClass('icon-close')
+        $(this).next().find('.icon').addClass('icon-ok')
       }
     })
   })
+  function checkedInput(el, reg) {
+    $(el).on('input', function () {
+      if (reg.test($(this).val())) {
+        $(this).next().removeClass('icon-close')
+        $(this).next().addClass('icon-ok')
+      } else {
+        $(this).next().removeClass('icon-ok')
+        $(this).next().addClass('icon-close')
+      }
+    })
+  }
 })
 
 // 填表效果
@@ -209,3 +253,64 @@ $(function() {
 //     scroll+=100
 //   })
 // })
+
+
+// 验证提交
+
+$(function () {
+  $('.reg .submit').click(function () {
+    var $allIcon = $('.reg i.icon')
+    var $ok = $('.reg i.icon-ok')
+    if ($ok.length < 19) {
+      $.each($allIcon, function (index, item) {
+        if (!$(item).hasClass('icon-ok')) {
+          $(this).addClass('icon-close')
+        } else {
+          $(this).removeClass('icon-close')
+          $(this).addClass('icon-ok')
+        }
+      })
+      console.log('信息不完整')
+    } else {
+      var data = {
+        'application': {
+          'name': $('#username').val(),
+          'sex': $("input[name='sex']:checked").val(),
+          'number': $('#student').val(),
+          'address': '中国 ' + $('#placeProvince').text() + ' ' + $('#placeCity').text(),
+          'phone': $('#phone').val(),
+          'qq': $('#qq').val(),
+          'email': $('#email').val(),
+          'college': $('#college').text(),
+          'major': $('#major').val(),
+          'grade': $('#grade').text(),
+          'math_grade': $('#math').val(),
+          'english_grade': $('#english').val(),
+          'direct': $("input[name='fx']:checked").val(),
+          'referrer': $('#referrer').val(),
+        },
+        'question': {
+          'answer1': $('#question1').val(),
+          'answer2': $('#question2').val(),
+          'answer3': $('#question3').val(),
+          'answer4': $('#question4').val(),
+          'answer5': $('#question5').val(),
+          'answer6': $('#question6').val()
+        }
+      }
+      // Api链接
+      var url = './admin.html'
+      $.ajax({
+        type: "post",
+        url: url,
+        data: data,
+        success: function (data) {
+          console.log(data)
+        },
+        error: function(){
+          console.log('请重新提交')
+        }
+      });
+    }
+  })
+})
