@@ -183,7 +183,7 @@ $(function () {
   // 学号
   checkedInput('#student', /^20[1-9]\d{9}$/, 1)
   // 手机
-  checkedInput('#phone', /^1[3|4|5|8][0-9]\d{8}$/)
+  checkedInput('#phone', /^1[3|4|5|7|8][0-9]\d{8}$/)
   // 验证QQ
   checkedInput('#qq', /^\d{5,11}$/)
   // 验证电子邮箱
@@ -226,9 +226,9 @@ $(function () {
           $.ajax({
             type: "post",
             url: 'http://csecl/applications/chk',
-            data: {'number':$(this).val()},
+            data: { 'number': $(this).val() },
             success: function (data) {
-              if(parseInt(data.code)===201){
+              if (parseInt(data.code) === 201) {
                 dom.removeClass('icon-ok')
                 dom.addClass('icon-close')
                 $('.student-error').text('该学号已经报名成功!!').fadeIn()
@@ -258,7 +258,6 @@ $(function () {
   $('.reg .submit').click(function () {
     var $allIcon = $('.reg i.icon')
     var $ok = $('.reg i.icon-ok')
-
     if ($ok.length < 19) {
       $.each($allIcon, function (index, item) {
         if (!$(item).hasClass('icon-ok')) {
@@ -271,10 +270,8 @@ $(function () {
       $errorInfo.fadeIn('fast')
       setTimeout(function () {
         $errorInfo.fadeOut('fast')
-      },2000)
+      }, 2000)
     } else {
-      // 弹出正在提交界面
-      $okInfo.fadeIn()
       var data = {
         'application': {
           'name': $('#username').val(),
@@ -303,17 +300,63 @@ $(function () {
       }
       // Api链接
       var url = 'http://csecl/applications/createapp'
-      $.ajax({
-        type: "post",
-        url: url,
-        data: data,
-        success: function (data) {
-          console.log(data)
-        },
-        error: function () {
-          console.log('请重新提交')
-        }
-      });
+      var $steup = $('.steup')
+      // 弹出正在提交界面
+      $okInfo.fadeIn()
+      $('#form-reset').click(function () {
+        $okInfo.fadeOut()
+      })
+      $('#form-commit').click(function () {
+        $('.confirm').hide()
+        $steup.html('<p><img src="./images/loading.gif"></p><p><span>正在验证数据...</span></p>')
+        setTimeout(function () {
+          $steup.html('<p><img src="./images/loading.gif"></p><p><span>正在提交数据...</span></p>')
+        }, 2000, )
+        setTimeout(function () {
+          $.ajax({
+            type: "post",
+            url: url,
+            data: data,
+            success: function (data) {
+              if (parseInt(data.code) === 200) {
+                $steup.html('<p><span class="icon icon-ok"></span></p><p><span>恭喜，报名成功</span></p>')
+                setTimeout(function(){
+                  $okInfo.fadeOut()
+                  $('#username').val()
+                  $('#student').val()
+                  $('#placeProvince').text()
+                  $('#placeCity').text()
+                  $('#phone').val()
+                  $('#qq').val()
+                  $('#email').val()
+                  $('#college').text()
+                  $('#major').val()
+                  $('#grade').text()
+                  $('#math').val()
+                  $('#english').val()
+                  $('#referrer').val()
+                  $('#question1').val()
+                  $('#question2').val()
+                  $('#question3').val()
+                  $('#question4').val()
+                  $('#question5').val()
+                  $('#question6').val()
+                },2000)
+              }
+            },
+            error: function () {
+              $steup.html('<p><span class="icon icon-close"></span></p><p><span>提交失败，稍后重试</span></p>')
+              setTimeout(function(){
+                $okInfo.fadeOut()
+                $steup.html('')
+                setTimeout(function(){
+                  $('.confirm').show()
+                },2000)
+              },2000)
+            }
+          })
+        }, 3000)
+      })
     }
   })
 })
