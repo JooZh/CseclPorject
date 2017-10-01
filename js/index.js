@@ -103,7 +103,7 @@ $(function () {
   var year = new Date().getFullYear();
   var yearList = [(year - 1), year]
   $.each(yearList, function (index, value) {
-    $showYear.append('<li >' + value + '级</li>')
+    $showYear.append('<li >' + value + '</li>')
   })
   $yearSelect.click(function (e) {
     e.stopPropagation()
@@ -181,9 +181,9 @@ $(function () {
   // 姓名
   checkedInput('#username', /^[\u4E00-\u9FA5]{2,4}$/)
   // 学号
-  checkedInput('#student', /^20[1-9]\d{9}$/)
-  // 学号
-  checkedInput('#phone', /^1[3|4|5|8][0-9]\d{8}$/, 1)
+  checkedInput('#student', /^20[1-9]\d{9}$/, 1)
+  // 手机
+  checkedInput('#phone', /^1[3|4|5|8][0-9]\d{8}$/)
   // 验证QQ
   checkedInput('#qq', /^\d{5,11}$/)
   // 验证电子邮箱
@@ -216,67 +216,49 @@ $(function () {
   })
   function checkedInput(el, reg, fn) {
     $(el).on('input', function () {
+      $('.student-error').text('').hide()
+      var dom = $(this).next()
       if (reg.test($(this).val())) {
-        $(this).next().removeClass('icon-close')
-        $(this).next().addClass('icon-ok')
+        dom.removeClass('icon-close')
+        dom.addClass('icon-ok')
         // 实时验证是否重复注册
         if (fn) {
           $.ajax({
             type: "post",
-            url: '',
-            data: $(this).val(),
+            url: 'http://csecl/applications/chk',
+            data: {'number':$(this).val()},
             success: function (data) {
               if(parseInt(data.code)===201){
-                console.log('该学号已经报名成功')
+                dom.removeClass('icon-ok')
+                dom.addClass('icon-close')
+                $('.student-error').text('该学号已经报名成功!!').fadeIn()
               }
-            },
-            error: function () {
-              console.log('验证失败，请稍后再试')
             }
+            // error: function () {
+            //   dom.removeClass('icon-ok')
+            //   dom.addClass('icon-close')
+            //   $('.student-error').text('验证失败，请稍后再试!!').fadeIn()
+            // }
           });
         }
       } else {
-        $(this).next().removeClass('icon-ok')
-        $(this).next().addClass('icon-close')
+        dom.removeClass('icon-ok')
+        dom.addClass('icon-close')
       }
     })
   }
 })
 
-// 填表效果
-
-// $(function(){
-//   var $line = $('.line,.submit,.line-text')
-//   var $add = $('#consSaa')
-//   var num = 2
-//   var scroll = 100
-//   console.log($line)
-//   $line.hide()
-//   $line.eq(0).show()
-//   $line.eq(1).show()
-//   $add.hide()
-//   $line.eq(1).click(function(){
-//     $add.show()
-//   })
-//   $add.click(function(){
-//     $add.hide()
-//     $line.eq(num).slideDown()
-//     $line.eq(num).click(function(){
-//       $add.show()
-//     })
-//     $('.bd-wrapper').animate({scrollTop: scroll}, 1000)
-//     num++
-//     scroll+=100
-//   })
-// })
-
-// 验证是否已经注册
-
 // 验证提交
 $(function () {
+  var $okInfo = $('.ok-info')
+  var $errorInfo = $('.error-info')
+  $okInfo.hide()
+  $errorInfo.hide()
   $('.reg .submit').click(function () {
     var $allIcon = $('.reg i.icon')
     var $ok = $('.reg i.icon-ok')
+
     if ($ok.length < 19) {
       $.each($allIcon, function (index, item) {
         if (!$(item).hasClass('icon-ok')) {
@@ -286,8 +268,13 @@ $(function () {
           $(this).addClass('icon-ok')
         }
       })
-      console.log('信息不完整')
+      $errorInfo.fadeIn('fast')
+      setTimeout(function () {
+        $errorInfo.fadeOut('fast')
+      },2000)
     } else {
+      // 弹出正在提交界面
+      $okInfo.fadeIn()
       var data = {
         'application': {
           'name': $('#username').val(),
@@ -330,3 +317,30 @@ $(function () {
     }
   })
 })
+
+// 填表效果
+
+// $(function(){
+//   var $line = $('.line,.submit,.line-text')
+//   var $add = $('#consSaa')
+//   var num = 2
+//   var scroll = 100
+//   console.log($line)
+//   $line.hide()
+//   $line.eq(0).show()
+//   $line.eq(1).show()
+//   $add.hide()
+//   $line.eq(1).click(function(){
+//     $add.show()
+//   })
+//   $add.click(function(){
+//     $add.hide()
+//     $line.eq(num).slideDown()
+//     $line.eq(num).click(function(){
+//       $add.show()
+//     })
+//     $('.bd-wrapper').animate({scrollTop: scroll}, 1000)
+//     num++
+//     scroll+=100
+//   })
+// })
