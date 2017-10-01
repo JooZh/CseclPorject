@@ -183,11 +183,11 @@ $(function () {
   // 学号
   checkedInput('#student', /^20[1-9]\d{9}$/)
   // 学号
-  checkedInput('#phone', /^1[3|4|5|8][0-9]\d{8}$/)
+  checkedInput('#phone', /^1[3|4|5|8][0-9]\d{8}$/, 1)
   // 验证QQ
   checkedInput('#qq', /^\d{5,11}$/)
   // 验证电子邮箱
-  checkedInput('#emial', /^(\w)+(\.\w+)*@(\w)+((\.\w{2,3}){1,3})$/)
+  checkedInput('#email', /^(\w)+(\.\w+)*@(\w)+((\.\w{2,3}){1,3})$/)
   // 验证专业
   checkedInput('#major', /^[\u4E00-\u9FA5]{2,8}$/)
   // 验证数学
@@ -214,11 +214,27 @@ $(function () {
       }
     })
   })
-  function checkedInput(el, reg) {
+  function checkedInput(el, reg, fn) {
     $(el).on('input', function () {
       if (reg.test($(this).val())) {
         $(this).next().removeClass('icon-close')
         $(this).next().addClass('icon-ok')
+        // 实时验证是否重复注册
+        if (fn) {
+          $.ajax({
+            type: "post",
+            url: '',
+            data: $(this).val(),
+            success: function (data) {
+              if(parseInt(data.code)===201){
+                console.log('该学号已经报名成功')
+              }
+            },
+            error: function () {
+              console.log('验证失败，请稍后再试')
+            }
+          });
+        }
       } else {
         $(this).next().removeClass('icon-ok')
         $(this).next().addClass('icon-close')
@@ -254,9 +270,9 @@ $(function () {
 //   })
 // })
 
+// 验证是否已经注册
 
 // 验证提交
-
 $(function () {
   $('.reg .submit').click(function () {
     var $allIcon = $('.reg i.icon')
@@ -275,7 +291,7 @@ $(function () {
       var data = {
         'application': {
           'name': $('#username').val(),
-          'sex': $("input[name='sex']:checked").val(),
+          'sex': parseInt($("input[name='sex']:checked").val()),
           'number': $('#student').val(),
           'address': '中国 ' + $('#placeProvince').text() + ' ' + $('#placeCity').text(),
           'phone': $('#phone').val(),
@@ -284,8 +300,8 @@ $(function () {
           'college': $('#college').text(),
           'major': $('#major').val(),
           'grade': $('#grade').text(),
-          'math_grade': $('#math').val(),
-          'english_grade': $('#english').val(),
+          'math_grade': parseInt($('#math').val()),
+          'english_grade': parseInt($('#english').val()),
           'direct': $("input[name='fx']:checked").val(),
           'referrer': $('#referrer').val(),
         },
@@ -299,7 +315,7 @@ $(function () {
         }
       }
       // Api链接
-      var url = './admin.html'
+      var url = 'http://csecl/applications/createapp'
       $.ajax({
         type: "post",
         url: url,
@@ -307,7 +323,7 @@ $(function () {
         success: function (data) {
           console.log(data)
         },
-        error: function(){
+        error: function () {
           console.log('请重新提交')
         }
       });
