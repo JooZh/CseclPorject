@@ -2,23 +2,25 @@
 // 引入china_cities.min.js , api.js
 var citMap = china_cities;
 var api = api.signup
-
+var $content = $('.content');
 // 省份 县市选择
 $(function () {
-  var $content = $('.content');
   var $provinceSelect = $('.select-province-hook');
   var $showProvince = $('.show-province-hook');
   var $citySelect = $('.select-city-hook');
   var $showCity = $('.show-city-hook');
+  // 添加省份列表
   $.each(citMap, function (index, value) {
     if (index > 0) {
       $showProvince.append('<li title="' + value.name + '">' + value.name + '</li>')
     }
   });
+  // 点击选择省份
   $provinceSelect.click(function (e) {
     e.stopPropagation();
     $showProvince.slideToggle()
   });
+  // 省份未选择
   $citySelect.click(function (e) {
     e.stopPropagation();
     if ($showCity.find('li').length) {
@@ -27,6 +29,7 @@ $(function () {
       $citySelect.find('.show-select-hook').html('先选择省份')
     }
   });
+  // 省份列表项被点击插入省份的区域
   $.each($showProvince.find('li'), function (index, value) {
     $(value).click(function (e) {
       e.stopPropagation();
@@ -59,7 +62,6 @@ $(function () {
 
 // 选择年级
 $(function () {
-  var $content = $('.content');
   var $yearSelect = $('.select-year-hook');
   var $showYear = $('.show-year-hook');
   var year = new Date().getFullYear();
@@ -86,7 +88,6 @@ $(function () {
 
 // 选择学院
 $(function () {
-  var $content = $('.content');
   var $collegeSelect = $('.select-college-hook');
   var $showCollege = $('.show-college-hook');
   $collegeSelect.click(function (e) {
@@ -133,10 +134,6 @@ $(function () {
     }
   })
 });
-
-
-
-
 
 // 实时检查------------------------
 $(function () {
