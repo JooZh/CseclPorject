@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>后台登录</title>
+  <link rel="stylesheet" href="./assets/css/raster.css">
+  <link rel="stylesheet" href="./assets/css/common.css">
+  <link rel="stylesheet" href="./assets/css/icon.css">
+  <link rel="stylesheet" href="./assets/css/admin.css">
+</head>
+
+<body>
+  <div id="page-wrapper">
+    <div class="login-wrapper">
+      <div class="login">
+        <div class="title">CSECL-管理员</div>
+        <div class="task">
+          <div class="text show-border check-hook">
+            <span class="icon icon-user"></span>
+            <input id="email" type="email" placeholder="您的邮箱">
+            <button disabled id="sendCode-hook" class="send-code">发送验证码</button>
+          </div>
+          <p class="login-error">用户名不存在</p>
+        </div>
+        <div class="task">
+          <div class="text show-border check-hook">
+            <span class="icon icon-user"></span>
+            <input type="text" placeholder="获取的验证码">
+          </div>
+        </div>
+        <div id="submit-hook" class="submit">登 录</div>
+      </div>
+    </div>
+    <div class="content-wrapper">
+      <div class="header">
+        <div class="come">欢迎管理员</div>
+        <div class="come"></div>
+      </div>
+      <div class="center">
+        <ul class="le-list">
+
+          <li class="list-item">报名管理</li>
+          <li class="list-item">简介管理</li>
+          <li class="list-item">公告管理</li>
+          <li class="list-item">资源管理</li>
+          <li class="list-item">方向管理</li>
+        </ul>
+        <div class="ri-body"></div>
+      </div>
+    </div>
+  </div>
+  <script src="./assets/js/jquery.v1.11.1.min.js"></script>
+  <script src="./assets/js/api.js"></script>
+  <script src="./assets/js/admin.js"></script>
+</body>
+
+</html>
