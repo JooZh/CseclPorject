@@ -23,16 +23,26 @@
             <input id="email" type="email" placeholder="您的邮箱">
             <button disabled id="sendCode-hook" class="send-code">发送验证码</button>
           </div>
-          <p class="login-error">用户名不存在</p>
+          <p class="login-error"></p>
         </div>
         <div class="task">
           <div class="text show-border check-hook">
             <span class="icon icon-user"></span>
-            <input type="text" placeholder="获取的验证码">
+            <input id="backCode-hook" type="text" placeholder="获取的验证码">
+          </div>
+          <p class="code-error"></p>
+        </div>
+        <button id="submit-hook" class="submit">登 录</button>
+        <div class="sign-wrapper">
+          <div class="sign-flex">
+            <div class="sign">
+              <p><img src="./assets/images/loading.gif"></p>
+              <p><span>正在登录...</span></p>
+            </div>
           </div>
         </div>
-        <div id="submit-hook" class="submit">登 录</div>
       </div>
+
     </div>
     <div class="content-wrapper">
       <div class="header">
@@ -41,7 +51,6 @@
       </div>
       <div class="center">
         <ul class="le-list">
-
           <li class="list-item">报名管理</li>
           <li class="list-item">简介管理</li>
           <li class="list-item">公告管理</li>
@@ -53,7 +62,6 @@
     </div>
   </div>
   <script src="./assets/js/jquery.v1.11.1.min.js"></script>
-  <script src="./assets/js/api.js"></script>
   <script src="./assets/js/admin.js"></script>
 </body>
 

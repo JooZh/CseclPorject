@@ -1,7 +1,11 @@
 
 // 引入china_cities.min.js , api.js
+var origin = 'csecl';
 var citMap = china_cities;
-var api = api.signup
+var signup =  {
+  postData: origin+'/v1/applications/createapp?role=api',
+  checkNumber: origin+'/v1/applications/chk?role=api'
+};
 var $content = $('.content');
 // 省份 县市选择
 $(function () {
@@ -184,7 +188,7 @@ $(function () {
         if (fn) {
           $.ajax({
             type: "post",
-            url: api.checkNumber,
+            url: signup.checkNumber,
             data: { 'number': $(this).val() },
             success: function (data) {
               if (parseInt(data.code) === 201) {
@@ -270,7 +274,7 @@ $(function () {
         setTimeout(function () {
           $.ajax({
             type: "post",
-            url: api.postData,
+            url: signup.postData,
             data: data,
             success: function (data) {
               if (parseInt(data.code) === 200) {
