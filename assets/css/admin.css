@@ -168,14 +168,104 @@
 .content-wrapper .center .le-list{
     flex: 150px 0 0;
     background: #2A3542;
-    border-top: 1px solid #3E4E5F;
     height: 100%;
 }
-.content-wrapper .center .le-list .list-item{
+.content-wrapper .center .le-list .list-item-nav{
     height: 40px;
     line-height: 40px;
+    border-top: 1px solid #3E4E5F;
     border-bottom: 1px solid #3E4E5F;
+    margin-top: -1px;
     color: #fff;
     font-size: 14px;
     text-indent: 20px;
+    cursor: pointer;
+}
+.content-wrapper .center .le-list .list-item-nav.active{
+    background: #4A86DB;
+}
+.content-wrapper .center .ri-body{
+    flex: 1;
+    height: 100%;
+}
+.content-wrapper .center .ri-body .list-item-body{
+    display: none;
+    height: 100%;
+}
+.content-wrapper .center .ri-body .list-item-body.active{
+    display: block;
+}
+
+.students-wrapper{
+    display: flex;
+    height: 100%;
+}
+.students-wrapper .students-list{
+    flex: 1;
+    margin: 20px 10px 20px 20px;
+    overflow-y: scroll;
+    border: 1px solid #666;
+}
+.students-wrapper .students-list table{
+    line-height: 30px;
+    border: none;
+    width: 100%;
+    font-size: 12px;
+    text-indent: 10px;
+    margin-bottom: -1px;
+}
+.students-wrapper .students-list table tr{
+    display: flex;    
+    transition: all 0.1s ease-in-out;
+}
+.students-wrapper .students-list table tr:hover{
+    background: #e5e5e5;
+}
+.students-wrapper .students-list table tr th,
+.students-wrapper .students-list table tr td{
+    flex: 1;
+    border: 1px solid #666;
+    margin-left: -1px;
+    margin-top: -1px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+.students-wrapper .students-list table tr .fixed-50{
+    flex: 40px 0 0;
+    text-indent: 0px;
+    text-align: center;
+}
+/* .students-wrapper .students-list table tr:last-child td{
+    border-bottom: none;
+} */
+.students-wrapper .students-info{
+    flex: 1;
+    margin: 20px 20px 20px 10px;
+    border: 1px solid #666;
+    font-size: 14px;
+    padding: 20px;
+    overflow-y: scroll
+}
+.students-wrapper .students-info .row .line{
+    line-height: 22px;
+    margin-bottom: 10px;
+}
+.students-wrapper .students-info .row .line span{
+    font-size: 12px;
+    color: #777;
+}
+.students-wrapper .students-info .row .title{
+    line-height: 22px;
+    margin-bottom: 10px;
+}
+.students-wrapper .students-info .row .anser{
+    line-height: 22px;
+    margin-bottom: 20px;
+    color: #777;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 12px;
+    min-height: 44px;
 }
