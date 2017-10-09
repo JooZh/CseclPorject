@@ -5,7 +5,7 @@
  * url: http://themeforest.net/user/awedoo
  */
 
- ///** ANIMATION **/
+///** ANIMATION **/
 
 var awd_animated = true;
 
@@ -471,11 +471,14 @@ var awd_bg_number_of_curves = 64;
   ///** CUSTOM SCROLL **/
 
   function awdScrollbar() {
-
     $('.sections-block').perfectScrollbar({
-      suppressScrollX: true
+      suppressScrollX: true,
+      wheelPropagation: true
     });
-
+    $('.hide-show').perfectScrollbar({
+      suppressScrollX: true,
+      wheelPropagation: true
+    });
   }
 
 

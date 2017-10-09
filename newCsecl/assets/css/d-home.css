@@ -22,7 +22,7 @@
 }
 .home .title .word{
     padding: 10px 0;
-    border-bottom: 1px solid #232323;
+    border-bottom: 1px solid #fff;
 }
 .home .line-h{
     line-height: 24px;
@@ -41,8 +41,8 @@
 .home .info .fame span{
     font-size: 12px;
     display: inline-block;
-    background: #252525;
-    color: #fff;
+    background: #fff;
+    color: #326394;
     line-height: 20px;
     padding: 0px 5px;
     margin-right: 10px;
@@ -58,7 +58,7 @@
     margin: 0 auto;
     margin-bottom: 30px;
     text-align: center;
-    border:2px solid #232323;
+    border:2px solid #fff;
     border-radius: 50%;
     display: flex;
     flex-direction:column;
@@ -75,5 +75,5 @@
     font-size: 30px;
 }
 .home .ambient .img{
-    height: 200px;
+    height: 180px;
 }
