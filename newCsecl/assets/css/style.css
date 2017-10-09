@@ -1,7 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Quicksand:400,700);
 @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
 
-@charset "UTF-8";
 /*
  * author: Awedoo Studio
  * template: Bicolor - Creative Coming Soon Template
@@ -12,7 +11,7 @@
 */
 
 /*====================================================
-01. CSS Reset
+01. CSS Reset   in common.css
 02. Bootstrap fix for WinPhone 8 and IE10
 03. Basic Document Styles
 04. Colors
@@ -31,63 +30,7 @@
 01. CSS Reset
 ====================================================*/
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-}
-
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-    display: block;
-}
-
-body {
-    line-height: 1;
-}
-
-ol, ul {
-    list-style: none;
-}
-input{
-    outline: none;
-}
-textarea {
-    outline:none;
-    overflow: auto;
-    resize:none;
-    -webkit-appearance: none;
-}
-
-blockquote, q {
-    quotes: none;
-}
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-    content: '';
-    content: none;
-}
-
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
+/* in common.css */
 
 /*====================================================
 02. Bootstrap fix for WinPhone 8 and IE10
@@ -125,7 +68,6 @@ body {
     position: relative;
     font-size: 20px;
     line-height: 28px;
-    font-family: 'Quicksand', sans-serif;
     font-style: normal;
     font-weight: normal;
     background: #ffffff;
@@ -145,7 +87,6 @@ textarea {
     width: 100%;
     padding: 10px 20px;
     resize: both;
-    height: 150px;
 }
 
 #awd-site-wrap.bg {
@@ -299,7 +240,6 @@ textarea {
 ====================================================*/
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Montserrat", sans-serif;
     font-weight: 600;
     margin-bottom: 10px;
     letter-spacing: 2px;
@@ -372,7 +312,7 @@ strong {
     top: 40px;
     left: 40px;
     right: 40px;
-    height: 50px;
+    height: 32px;
     z-index: 20;
 }
 
@@ -385,7 +325,7 @@ strong {
     text-transform: lowercase;
     font-weight: bold;
     font-size: 30px;
-    line-height: 50px;
+    line-height: 32px;
     letter-spacing: 0;
     margin-bottom: 0;
 }
@@ -605,6 +545,7 @@ strong {
     table-layout: fixed;
     height: 100%;
     width: 100%;
+    text-align: left
 }
 
 .slides-wrap {
@@ -1257,12 +1198,11 @@ textarea::-webkit-input-placeholder {
     }
 
     #awd-site-logo > h1 {
-        font-size: 20px;
         line-height: 45px;
     }
 
     .navigation ul > li {
-        padding-left: 18px;
+        padding-left: 0px;
     }
 
     .navigation ul > li a {
@@ -1325,9 +1265,9 @@ textarea::-webkit-input-placeholder {
     }
 
     #awd-site-header {
-        top: 20px;
-        left: 20px;
-        right: 20px;
+        top: 10px;
+        left: 10px;
+        right: 10px;
     }
 
     #awd-site-logo {
@@ -1382,12 +1322,17 @@ textarea::-webkit-input-placeholder {
     .navigation ul > li {
         width: 100%;
         display: block;
+        margin-bottom: 10px;
     }
 
     .navigation ul > li a {
         display: inline-block;
+        width: 70%;
+        border-width: 1px;
+        border-style: solid;
         padding: 5px 0;
-        font-size: 18px;
+        font-size: 16px;
+        letter-spacing: 0px;
     }
 
     .navigation ul > li a:before,
@@ -1416,6 +1361,7 @@ textarea::-webkit-input-placeholder {
         top: 50%;
         right: auto;
         margin-left: -40px;
+        display: none;
     }
 
     .navigation ul > li a:after {
@@ -1423,6 +1369,7 @@ textarea::-webkit-input-placeholder {
         top: 50%;
         left: auto;
         margin-right: -40px;
+        display: none
     }
 
     #awd-site-content {
@@ -1496,10 +1443,12 @@ textarea::-webkit-input-placeholder {
     #awd-site-content {
         top: 90px;
         bottom: 0;
+        left: 0;
+        right: 0;
     }
 
     .menu-toggle {
-        top: 8px;
+        top: 6px;
         right: 0;
     }
 
@@ -1542,7 +1491,6 @@ textarea::-webkit-input-placeholder {
     }
 
     #awd-site-logo h1 {
-        font-size: 40px;
         line-height: 40px;
     }
 
