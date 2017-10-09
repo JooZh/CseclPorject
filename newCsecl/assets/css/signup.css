@@ -242,11 +242,13 @@
 .reg .ok-info .show-info .confirm{
   width: 200px;
   height: 85px;
+  font-size: 14px;
   background: #f6f6f6;
   border: 1px solid #ccc;
-  border-radius: 4px;
+
 }
 .reg .ok-info .show-info .confirm .confirm-title{
+  margin: 0;
   line-height: 45px;
   border-bottom: 1px solid #ccc;
 }
@@ -292,8 +294,8 @@
 .reg .hide-show{
   display: none;
   position: absolute;
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
   left: -2px;
   right: -2px;
   top: 100%;

@@ -54,7 +54,7 @@ $(function () {
     $('.sign-wrapper').fadeIn('fast');
     $.ajax({
       type: 'POST',
-      url: origin + '/v1/tokens/' + $email.val() + '?role=api?code=' + $('#backCode-hook').val(),
+      url: origin + '/v1/tokens/' + $email.val() + '?role=api&code=' + $('#backCode-hook').val(),
       success: function (data) {
         if (data.success === 'success') {
           setTimeout(function () {
@@ -72,8 +72,8 @@ $(function () {
             $submit.removeAttr('disabled');
             setTimeout(function () {
               $('.sign').html('<p><img src="./assets/images/loading.gif"></p><p><span>正在登录...</span></p></p>');
-            }, 500)
-          }, 3000)
+            }, 500);
+          }, 3000);
         }
 
       },

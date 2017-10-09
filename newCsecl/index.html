@@ -17,7 +17,9 @@
   <!-- <link rel="stylesheet" href="assets/css/bicolor.min.css"> -->
 
   <!-- CSS Global Compulsory -->
-  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <!--<link rel="stylesheet" href="assets/css/bootstrap.min.css">-->
+  <link rel="stylesheet" href="assets/css/raster.css">
+  <link rel="stylesheet" href="assets/css/common.css">
   <link rel="stylesheet" href="assets/css/animate.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/icon.css">
@@ -42,13 +44,13 @@
 
     <div id="bg">
       <div id="overlay">
-        <div class="awd-site-bg bg-home active" style="left: 300px; top: 249px;"></div>
-        <div class="awd-site-bg bg-subscribe" style="left: 300px; top: 307px;"></div>
-        <div class="awd-site-bg bg-about" style="left: 146.667px; top: 283.667px;"></div>
-        <div class="awd-site-bg bg-contact" style="left: 146.667px; top: 399.667px;"></div>
-        <div class="awd-site-bg bg-services" style="left: 1214.5px; top: 15px;"></div>
+        <div class="awd-site-bg bg-home active"></div>
+        <div class="awd-site-bg bg-subscribe"></div>
+        <div class="awd-site-bg bg-about"></div>
+        <div class="awd-site-bg bg-contact"></div>
+        <div class="awd-site-bg bg-services"></div>
       </div>
-      <canvas id="awd-site-canvas" width="375" height="667"></canvas>
+      <canvas id="awd-site-canvas"></canvas>
     </div>
 
     <!-- START SITE HEADER -->
@@ -108,152 +110,7 @@
               <!-- HOME SECTION -->
               <div class="slide-item active" data-slide-id="home">
                 <!-- START CONTAINER -->
-                <div class="container-fluid">
-                  <div class="row">
-                    <div class="col-md-12">
-                      <!-- START SLIDE CONTENT-->
-                      <div class="slide-content">
-                        <div class="row">
-                          <div class="col-lg-6 col-md-6 svm">
-                            <div class="section-info text-left">
-                              <div class="countdown">
-                                <div id="clock" class="animated fadeIn visible" data-animation="fadeIn" data-animation-delay="60"></div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-lg-5 col-lg-offset-1 col-md-6 svm">
-                            <div class="section-info text-right">
-                              <!-- START TITLE -->
-                              <h2 class="section-title text-default animated fadeIn visible" data-animation="fadeIn" data-animation-delay="50">Hey Guys!
-                                <br> 我们即将上线啦...</h2>
-                              <!-- END TITLE -->
-                              <p class="animated fadeIn visible" data-animation="fadeIn" data-animation-delay="55">我们的网站正在建设.
-                                <br> 它将是非常棒的网站.</p>
-                              <a href="#" class="btn go-slide animated fadeIn visible" data-animation="fadeIn" data-animation-delay="60" data-slide="about">更多资料</a>
-                              <a href="#" class="btn btn-inverse go-slide animated fadeIn visible" data-animation="fadeIn" data-animation-delay="60" data-slide="subscribe">联系我们!</a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <!-- END SLIDE CONTENT-->
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-12">
-                      <!-- START SLIDE CONTENT-->
-                      <div class="slide-content">
-                        <div class="row">
-                          <div class="col-lg-6 col-md-6 svm">
-                            <div class="section-info text-left">
-                              <div class="countdown">
-                                <div id="clock" class="animated fadeIn visible" data-animation="fadeIn" data-animation-delay="60"></div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-lg-5 col-lg-offset-1 col-md-6 svm">
-                            <div class="section-info text-right">
-                              <!-- START TITLE -->
-                              <h2 class="section-title text-default animated fadeIn visible" data-animation="fadeIn" data-animation-delay="50">Hey Guys!
-                                <br> 我们即将上线啦...</h2>
-                              <!-- END TITLE -->
-                              <p class="animated fadeIn visible" data-animation="fadeIn" data-animation-delay="55">我们的网站正在建设.
-                                <br> 它将是非常棒的网站.</p>
-                              <a href="#" class="btn go-slide animated fadeIn visible" data-animation="fadeIn" data-animation-delay="60" data-slide="about">更多资料</a>
-                              <a href="#" class="btn btn-inverse go-slide animated fadeIn visible" data-animation="fadeIn" data-animation-delay="60" data-slide="subscribe">联系我们!</a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <!-- END SLIDE CONTENT-->
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-12">
-                      <!-- START SLIDE CONTENT-->
-                      <div class="slide-content">
-                        <div class="row">
-                          <div class="col-lg-6 col-md-6 svm">
-                            <div class="section-info text-left">
-                              <div class="countdown">
-                                <div id="clock" class="animated fadeIn visible" data-animation="fadeIn" data-animation-delay="60"></div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-lg-5 col-lg-offset-1 col-md-6 svm">
-                            <div class="section-info text-right">
-                              <!-- START TITLE -->
-                              <h2 class="section-title text-default animated fadeIn visible" data-animation="fadeIn" data-animation-delay="50">Hey Guys!
-                                <br> 我们即将上线啦...</h2>
-                              <!-- END TITLE -->
-                              <p class="animated fadeIn visible" data-animation="fadeIn" data-animation-delay="55">我们的网站正在建设.
-                                <br> 它将是非常棒的网站.</p>
-                              <a href="#" class="btn go-slide animated fadeIn visible" data-animation="fadeIn" data-animation-delay="60" data-slide="about">更多资料</a>
-                              <a href="#" class="btn btn-inverse go-slide animated fadeIn visible" data-animation="fadeIn" data-animation-delay="60" data-slide="subscribe">联系我们!</a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <!-- END SLIDE CONTENT-->
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-12">
-                      <!-- START SLIDE CONTENT-->
-                      <div class="slide-content">
-                        <div class="row">
-                          <div class="col-lg-6 col-md-6 svm">
-                            <div class="section-info text-left">
-                              <div class="countdown">
-                                <div id="clock" class="animated fadeIn visible" data-animation="fadeIn" data-animation-delay="60"></div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-lg-5 col-lg-offset-1 col-md-6 svm">
-                            <div class="section-info text-right">
-                              <!-- START TITLE -->
-                              <h2 class="section-title text-default animated fadeIn visible" data-animation="fadeIn" data-animation-delay="50">Hey Guys!
-                                <br> 我们即将上线啦...</h2>
-                              <!-- END TITLE -->
-                              <p class="animated fadeIn visible" data-animation="fadeIn" data-animation-delay="55">我们的网站正在建设.
-                                <br> 它将是非常棒的网站.</p>
-                              <a href="#" class="btn go-slide animated fadeIn visible" data-animation="fadeIn" data-animation-delay="60" data-slide="about">更多资料</a>
-                              <a href="#" class="btn btn-inverse go-slide animated fadeIn visible" data-animation="fadeIn" data-animation-delay="60" data-slide="subscribe">联系我们!</a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <!-- END SLIDE CONTENT-->
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-12">
-                      <!-- START SLIDE CONTENT-->
-                      <div class="slide-content">
-                        <div class="row">
-                          <div class="col-lg-6 col-md-6 svm">
-                            <div class="section-info text-left">
-                              <div class="countdown">
-                                <div id="clock" class="animated fadeIn visible" data-animation="fadeIn" data-animation-delay="60"></div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-lg-5 col-lg-offset-1 col-md-6 svm">
-                            <div class="section-info text-right">
-                              <!-- START TITLE -->
-                              <h2 class="section-title text-default animated fadeIn visible" data-animation="fadeIn" data-animation-delay="50">Hey Guys!
-                                <br> 我们即将上线啦...</h2>
-                              <!-- END TITLE -->
-                              <p class="animated fadeIn visible" data-animation="fadeIn" data-animation-delay="55">我们的网站正在建设.
-                                <br> 它将是非常棒的网站.</p>
-                              <a href="#" class="btn go-slide animated fadeIn visible" data-animation="fadeIn" data-animation-delay="60" data-slide="about">更多资料</a>
-                              <a href="#" class="btn btn-inverse go-slide animated fadeIn visible" data-animation="fadeIn" data-animation-delay="60" data-slide="subscribe">联系我们!</a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <!-- END SLIDE CONTENT-->
-                    </div>
-                  </div>
+                <div class="layout">
                   <div class="row">
                     <div class="col-md-12">
                       <!-- START SLIDE CONTENT-->
@@ -290,7 +147,7 @@
               <!-- SUBSCRIBE SECTION -->
               <div class="slide-item" data-slide-id="subscribe">
                 <!-- START CONTAINER -->
-                <div class="container-fluid">
+                <div class="layout">
                   <div class="row">
                     <div class="col-md-12">
 
@@ -346,7 +203,7 @@
               <!-- ABOUT SECTION -->
               <div class="slide-item" data-slide-id="about">
                 <!-- START CONTAINER -->
-                <div class="container-fluid">
+                <div class="layout">
                   <div class="row">
                     <div class="col-md-12">
 
@@ -405,7 +262,7 @@
               <!-- SERVICES SECTION -->
               <div class="slide-item" data-slide-id="services">
                 <!-- START CONTAINER -->
-                <div class="container-fluid">
+                <div class="layout">
                   <div class="row">
                     <div class="col-md-12">
                       <!-- START SLIDE CONTENT-->
@@ -450,7 +307,7 @@
               <!-- CONTACT SECTION -->
               <div class="slide-item" data-slide-id="contact">
                 <!-- START CONTAINER -->
-                <div class="container">
+                <div class="layout">
                   <div class="reg animated fadeIn visible" data-animation="fadeIn" data-animation-delay="60">
                     <div class="line-text">选择比努力重要,少走弯路才是最快的捷径</div>
                     <div class="row">
