@@ -1,0 +1,69 @@
+Photoshop教程&设计网站
+视频和论坛及网站学习
+ps教程网站：http://www.16xx8.com/
+http://www.imooc.com/ --------慕课网不仅仅只有ps学习，还有其他的学习内容可以自己去探索。
+https://www.zhihu.com/------知乎网
+http://www.runoob.com/------菜鸟教程，有实例教程
+http://www.w3school.com.cn/----W3SCHOOL网站建设教程，从基础到深入
+设计灵感培养
+	•	1、http://www.uisdc.com/--------优设网
+	•	2、http://www.zcool.com.cn/----------站酷网
+	•	3、https://www.pinterest.com/---------国外网站
+	•	4、http://designdao.com/---------设计之道
+	•	5、http://www.runningcheese.com/recommended-sites----------------好用的网站分享
+	•	6、http://www.peise.net/-----http://www.peise.net/tools/web/----------配色网
+	•	7、http://huaban.com/------------花瓣网
+	•	9、http://www.typeisbeautiful.com/-------------字体
+	•	10、https://dribbble.com/------------设计网站
+	•	11、https://www.behance.net/---------设计作品集
+	•	12、http://www.ui.cn/------------UI中国
+	•	图片素材
+	•	13、http://www.easyicon.net/iconsearch/baby/3/----http://www.iconfont.cn/plus--------icon素材网站
+	•	14、https://www.pexels.com/---https://www.sitebuilderreport.com/stock-up-----------国外图片素材网站
+	•	http://588ku.com/sucai/——-千库网
+	•	15、https://pixabay.com/------免费高清图像
+	•	
+书籍推荐：《写给大家看的设计书》、《设计师要懂心理学》、《简约至上-交互式设计》、《配色设计原理》《javascript高级程序设计(第3版)》《.七日掌握设计配色基础》
+软件
+
+
+前端设计
+HTML+CSS基础课程：http://www.imooc.com/learn/9
+HTML5开发开发知识体系：http://www.jikexueyuan.com/path/html5
+JavaScript入门篇：http://www.imooc.com/learn/36
+JavaScript进阶篇：http://www.imooc.com/learn/10
+表单验证：http://www.imooc.com/learn/44
+jQuery基础 (一)—样式篇：http://www.imooc.com/learn/418
+jQuery基础(二)—DOM篇：http://www.imooc.com/learn/530
+jQuery基础(三)—事件篇：http://www.imooc.com/learn/429
+Ajax全接触：http://www.imooc.com/learn/250
+
+程序开发：
+HTML+CSS基础课程：http://www.imooc.com/learn/9
+HTML5开发开发知识体系：http://www.jikexueyuan.com/path/html5
+JavaScript入门篇：http://www.imooc.com/learn/36
+JavaScript进阶篇：http://www.imooc.com/learn/10
+Ajax全接触：http://www.imooc.com/learn/250
+
+WAMP安装包：http://pan.baidu.com/s/1geRxHBH
+高洛峰PHP视频：http://pan.baidu.com/s/1mij4zJa
+PHP语言开发知识体系：http://www.jikexueyuan.com/path/php
+PHP入门篇：http://www.imooc.com/learn/54
+PHP中的HTTP协议：http://www.imooc.com/learn/758
+与MySQL的零距离接触：http://www.imooc.com/learn/122
+MySQL入门：http://www.jikexueyuan.com/course/627.html
+MySQL函数：http://www.jikexueyuan.com/course/1378.html
+PHP与MySQL：http://www.jikexueyuan.com/course/457.html
+PHP与MySQL关系大揭秘：http://www.imooc.com/learn/116
+PHP进阶篇：http://www.imooc.com/learn/26
+PHP进阶篇-字符串操作：http://www.imooc.com/learn/726
+PHP进阶篇-函数：http://www.imooc.com/learn/737
+PHP面向对象编程：http://www.imooc.com/learn/184
+JSON应用场景与实战：http://www.imooc.com/learn/68
+
+MVC架构模式分析与设计：http://www.imooc.com/learn/69
+ThinkPHP 5.0--基础篇：http://www.imooc.com/learn/832
+Yii框架—基础篇：http://www.imooc.com/learn/404
+Yii框架—工具篇：http://www.imooc.com/learn/520
+Yii框架—高效篇：http://www.imooc.com/learn/440
+Yii框架—扩展篇：http://www.imooc.com/learn/491
