@@ -1,10 +1,10 @@
 Photoshop教程&设计网站
 视频和论坛及网站学习
 ps教程网站：http://www.16xx8.com/
-http://www.imooc.com/ --------慕课网不仅仅只有ps学习，还有其他的学习内容可以自己去探索。
-https://www.zhihu.com/------知乎网
-http://www.runoob.com/------菜鸟教程，有实例教程
-http://www.w3school.com.cn/----W3SCHOOL网站建设教程，从基础到深入
+ --------不仅仅只有ps学习，还有其他的学习内容可以自己去探索。
+------
+------，有实例教程
+----W3SCHOOL网站建设教程，从基础到深入
 设计灵感培养
 	•	1、http://www.uisdc.com/--------优设网
 	•	2、http://www.zcool.com.cn/----------站酷网
@@ -26,6 +26,14 @@ http://www.w3school.com.cn/----W3SCHOOL网站建设教程，从基础到深入
 书籍推荐：《写给大家看的设计书》、《设计师要懂心理学》、《简约至上-交互式设计》、《配色设计原理》《javascript高级程序设计(第3版)》《.七日掌握设计配色基础》
 软件
 
+产品运营：
+从零开始做运营：http://pan.baidu.com/s/1cm6Gma
+创业计划简本：http://pan.baidu.com/s/1skOv9jn
+给产品经理讲技术：http://pan.baidu.com/s/1pLJWkR5
+ppt参考案例：http://pan.baidu.com/s/1c2rSvvE
+金钥匙计划书2.0版：http://pan.baidu.com/s/1nuVprRV
+经典MINI汽车广告：http://pan.baidu.com/s/1mimmv48
+《习惯的力量》：http://pan.baidu.com/s/1dFiwMu1
 
 前端设计
 HTML+CSS基础课程：http://www.imooc.com/learn/9
@@ -33,17 +41,21 @@ HTML5开发开发知识体系：http://www.jikexueyuan.com/path/html5
 JavaScript入门篇：http://www.imooc.com/learn/36
 JavaScript进阶篇：http://www.imooc.com/learn/10
 表单验证：http://www.imooc.com/learn/44
-jQuery基础 (一)—样式篇：http://www.imooc.com/learn/418
-jQuery基础(二)—DOM篇：http://www.imooc.com/learn/530
-jQuery基础(三)—事件篇：http://www.imooc.com/learn/429
+jQuery基础(一)— 样式篇：http://www.imooc.com/learn/418
+jQuery基础(二)— DOM篇：http://www.imooc.com/learn/530
+jQuery基础(三)— 事件篇：http://www.imooc.com/learn/429
 Ajax全接触：http://www.imooc.com/learn/250
 
+前端设计补充
+七日掌握设计配色基础：http://pan.baidu.com/s/1boL0uD5
+JavaScript权威指南(第6版)：http://pan.baidu.com/s/1hsDyUR6
+精通CSS：高级Web标准解决方案（第2版）：http://pan.baidu.com/s/1kVGG5Zh
+配色设计原理：http://pan.baidu.com/s/1boDYLND
+写给大家看的设计书(第3版) ：http://pan.baidu.com/s/1hsqymQ4
+色彩怎么选，设计怎么做：http://pan.baidu.com/s/1i46uYln
+设计---网站分享：http://pan.baidu.com/s/1hrQFQqo
+
 程序开发：
-HTML+CSS基础课程：http://www.imooc.com/learn/9
-HTML5开发开发知识体系：http://www.jikexueyuan.com/path/html5
-JavaScript入门篇：http://www.imooc.com/learn/36
-JavaScript进阶篇：http://www.imooc.com/learn/10
-Ajax全接触：http://www.imooc.com/learn/250
 
 WAMP安装包：http://pan.baidu.com/s/1geRxHBH
 高洛峰PHP视频：http://pan.baidu.com/s/1mij4zJa
