@@ -20,7 +20,7 @@
 }
 /* 标题 */
 .home .title{
-    letter-spacing: 0px;
+    letter-spacing: 0;
     margin-bottom: 30px;
 }
 .home .title .word{
@@ -202,7 +202,7 @@
 .home .pi{
     width: 120px;
     height: 120px;
-    margin: 30px auto 50px auto;
+    margin: 10px auto 20px auto;
     text-align: center;
     border:2px solid rgba(255,255,255,0.7);
     background: rgba(0,0,0,0.1);
@@ -239,7 +239,7 @@
     line-height: 20px;
     padding: 0px 5px;
     margin-right: 10px;
-    letter-spacing: 0px;
+    letter-spacing: 0;
 }
 .home .info .say{
     margin-bottom: 10px;
@@ -259,17 +259,23 @@
 
 /* 荣誉和奖项 */
 
-.home .sysz .fame span{
-    font-size: 14px;
-    display: block;
+.home .sysz .fame p{
+    font-size: 12px;
     background: rgba(0,0,0,0.4);
     color: #fff;
+    display: flex;
     line-height: 25px;
     padding: 0px 8px;
     margin: 0 0 8px 0;
-    letter-spacing: 0px;
+    letter-spacing: 0;
 }
-
+.home .sysz .fame p .left{
+  flex: 1;
+}
+.home .sysz .fame p .right{
+  text-align: right;
+  flex: 120px 0 0;
+}
 /*====================================================
   services.css
 ====================================================*/
@@ -316,6 +322,49 @@
 .services .item-wrapper .items .book span{
   display: inline-block;
 }
+/*====================================================
+  subscribe.css
+====================================================*/
+.subscribe{
+  font-size:14px;
+}
+.subscribe .row{
+  margin-bottom: 40px;
+}
+.subscribe .image {
+  margin: 10px;
+  padding: 10px;
+  background: rgba(255,255,255,0.4)
+}
+.subscribe .image .img{
+  width: 100%;
+}
+.subscribe .image .img img{
+  width: 100%;
+  display: block;
+}
+.subscribe .info{
+  margin: 10px;
+  border: 1px solid #555;
+  background: rgba(255,255,255,0.1);
+}
+.subscribe p{
+  margin-bottom: 3px;
+}
+.subscribe .info-txt{
+  font-size:16px;
+  padding: 10px;
+}
+.subscribe .list-wrapper{
+  padding-left: 20px;
+}
+.subscribe .title {
+  text-align: center;
+  font-size: 22px;
+  line-height: 70px;
+  margin-bottom: 20px;
+}
+
 /*====================================================
   contact.css
 ====================================================*/
@@ -440,7 +489,9 @@
     display: none;
     color: #333
   }
-  
+.reg .line .task .fx-info .info-word p{
+  margin: 0;
+}
   
   
   .reg .line .task .place{
@@ -482,7 +533,7 @@
   .reg .line .task .area .text-number{
     position: absolute;
     right: 8px;
-    bottom: 8px;
+    bottom: 12px;
     font-size: 12px;
     height: 20px;
     line-height: 20px;

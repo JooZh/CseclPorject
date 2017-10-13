@@ -3,6 +3,8 @@
 * 调用
 ===================================*/
 $(function () {
+  // 手机端的延迟问题
+  FastClick.attach(document.body);
   Menu();
   ContentSlider();
   ScorllBar();
@@ -41,16 +43,21 @@ function Menu() {
 
 var ps1;
 function ScorllBar() {
-  var dom = document.querySelector('.slides-wrap');
-  ps1 = new PerfectScrollbar(dom, {
+  var dom1 = document.querySelector('.slides-wrap');
+  ps1 = new PerfectScrollbar(dom1, {
     wheelSpeed: 2,
     wheelPropagation: true,
-    suppressScrollX: true
+    suppressScrollX: true,
+    swipePropagation: true
   });
-  ps2 = new PerfectScrollbar('.hide-show', {
+}
+// ContentSlider() 调用后使用mScorllBar()
+function mScorllBar(dom) {
+  new PerfectScrollbar(dom, {
     wheelSpeed: 2,
     wheelPropagation: true,
-    suppressScrollX: true
+    suppressScrollX: true,
+    swipePropagation: true
   });
 }
 
@@ -100,9 +107,13 @@ function ContentSlider() {
       menu_elem.removeClass('active');
       elem.addClass('active');
     }
+    // 针对滚动的特殊代码
     $('.slides-wrap').html('');
     ps1.update();
     $('.slides-wrap').html(dom[goToSlide]);
+    $.each($('.hide-show'),function (i,v) {
+      mScorllBar(v);
+    });
 
     // 调用表单的js
     if(goToSlide === 'contact'){

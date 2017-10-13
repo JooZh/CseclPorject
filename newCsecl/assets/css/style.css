@@ -1,5 +1,3 @@
-@import url(http://fonts.googleapis.com/css?family=Quicksand:400,700);
-@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
 
 /*
  * author: Awedoo Studio
@@ -234,7 +232,7 @@ textarea {
 
 .bg-services,
 .bg-services nav:before {
-    background-color: #326394;
+    background-color: #708090;
     color: #ffffff;
 }
 
@@ -1054,7 +1052,7 @@ textarea::-webkit-input-placeholder {
   
 .ps--active-x > .ps__rail-x,
 .ps--active-y > .ps__rail-y {
-    display: block;
+    display: none;
     background-color: transparent;
 }
   
