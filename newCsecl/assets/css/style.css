@@ -324,13 +324,14 @@ strong {
 
 #awd-site-logo {
     float: left;
+    margin-left: 10px;
 }
 
 #awd-site-logo h1 {
     font-family: "Quicksand", sans-serif;
     text-transform: lowercase;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 25px;
     line-height: 32px;
     letter-spacing: 0;
     margin-bottom: 0;
@@ -338,14 +339,26 @@ strong {
 
 #awd-site-logo h1 > a {
     display: inline-block;
+    height: 32px;
+    line-height: 32px;
 }
 
 #awd-site-logo h1 > a > i {
-    margin-right: 15px;
+    width: 32px;
+    height: 32px;
+    background-image: url(../images/logo_w.png);
+    background-size: 100% 100%;
+    float: left;
+    margin-right: 10px;
 }
-
+#awd-site-logo h1 > a > i.wbg{
+    background-image: url(../images/logo_w.png);
+}
+#awd-site-logo h1 > a > i.bbg{
+    background-image: url(../images/logo_b.png);
+}
 #awd-site-logo h1 > a > span {
-    display: inline-block;
+    float: left;
 }
 
 /*====================================================
@@ -355,6 +368,7 @@ strong {
 #awd-site-nav {
     position: relative;
     float: right;
+    margin-right: 5px;
 }
 
 .menu-toggle {
@@ -529,8 +543,8 @@ strong {
 
 #awd-site-content {
     position: absolute;
-    top: 130px;
-    bottom: 110px;
+    top: 110px;
+    bottom: 80px;
     left: 25px;
     right: 25px;
     text-align: center;
@@ -908,7 +922,7 @@ textarea::-webkit-input-placeholder {
 
 #awd-site-footer {
     position: absolute;
-    bottom: 40px;
+    bottom: 20px;
     left: 40px;
     right: 40px;
     height: 30px;
@@ -1172,10 +1186,6 @@ textarea::-webkit-input-placeholder {
         right: 30px;
     }
 
-    #awd-site-logo > h1 {
-        line-height: 45px;
-    }
-
     .navigation ul > li {
         padding-left: 0px;
     }
@@ -1248,12 +1258,14 @@ textarea::-webkit-input-placeholder {
     #awd-site-logo {
         position: absolute;
         float: none;
+        margin: 0;
         z-index: 999;
     }
 
     .menu-toggle,
     #awd-site-nav.active {
         display: block;
+        top:5px;
     }
 
     #awd-site-nav {
@@ -1348,8 +1360,10 @@ textarea::-webkit-input-placeholder {
     }
 
     #awd-site-content {
-        top: 96px;
-        bottom: 0px;
+        top: 80px;
+        bottom: 45px;
+        left: 0;
+        right: 0; 
     }
 
     .subscribe-form .form-notice {
@@ -1359,7 +1373,7 @@ textarea::-webkit-input-placeholder {
     #awd-site-footer {
         left: 20px;
         right: 20px;
-        bottom: 20px;
+        bottom: 10px;
         height: 30px;
     }
 
@@ -1369,13 +1383,14 @@ textarea::-webkit-input-placeholder {
         text-align: center;
     }
 
-    .copyright {
-        display: none;
+    .copyright p{
+        font-size: 12px;
+        letter-spacing: 0;
     }
 
-    #awd-site-footer {
+    /* #awd-site-footer {
         display: none;
-    }
+    } */
 
 }
 
@@ -1416,14 +1431,14 @@ textarea::-webkit-input-placeholder {
 
 
     #awd-site-content {
-        top: 90px;
-        bottom: 0;
+        top: 60px;
+        bottom: 45px;
         left: 0;
         right: 0;
     }
 
     .menu-toggle {
-        top: 6px;
+        top: 3px;
         right: 0;
     }
 
@@ -1461,17 +1476,13 @@ textarea::-webkit-input-placeholder {
     #awd-site-header {
         height: 40px;
         top: 15px;
-        left: 15px;
-        right: 15px;
-    }
-
-    #awd-site-logo h1 {
-        line-height: 40px;
+        left: 10px;
+        right: 10px;
     }
 
     #awd-site-content {
-        top: 70px;
-        bottom: 0;
+        top: 60px;
+        bottom: 45px;
         left: 0;
         right: 0;
     }

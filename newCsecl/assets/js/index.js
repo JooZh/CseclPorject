@@ -9,6 +9,9 @@ $(function () {
   ContentSlider();
   ScorllBar();
   cavansLines();
+  $(window).resize(function(){
+    cavansLines();
+  })
 });
 
 /*===================================
@@ -118,6 +121,9 @@ function ContentSlider() {
     // 调用表单的js
     if(goToSlide === 'contact'){
       upContact();
+      $('.logo').removeClass('wbg').addClass('bbg');
+    }else{
+      $('.logo').removeClass('bbg').addClass('wbg');
     }
   });
 }
